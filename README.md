@@ -6,6 +6,10 @@ It is primarily designed to make modding some common features a little easier an
 # Features
 - Category Package
   - Category: Hold categories of mobs when checking against a mob type, currently holds:
+    - Arthropod
+    - Dragon
+    - Ender
+    - Passive
     - Undead 
 - Item Package
   - ExtraDamageCategorySwordItem: A sword that deals extra damage to specific categories of mobs.
