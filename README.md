@@ -16,3 +16,6 @@ It is primarily designed to make modding some common features a little easier an
   - FuelBlockItem: A block that can be used as a fuel source in furnaces.
   - FuelItem: An item that can be used as a fuel source in furnaces.
   - ToolItemPropFactory: An easier and more efficient way to make typical vanilla-styled tools.
+- Tier Package
+  - MidTierFactory: A factory for creating tiers between two pre-existing tiers.
+  - TierConverter: A converter between SimpleTier and Tier.
