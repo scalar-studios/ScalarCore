@@ -6,6 +6,7 @@ import net.minecraft.world.entity.animal.horse.ZombieHorse;
 import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
 import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.monster.*;
+import net.minecraft.world.entity.monster.warden.Warden;
 
 public class Category {
 
@@ -74,5 +75,29 @@ public class Category {
         return (entity instanceof net.minecraft.world.entity.animal.Animal ||
                 entity instanceof net.minecraft.world.entity.npc.Villager ||
                 entity instanceof net.minecraft.world.entity.npc.WanderingTrader);
+    }
+
+    /**
+     * Checks if the entity is a boss entity.
+     *
+     * @param entity the entity to check
+     * @return true if the entity is a boss, false otherwise
+     */
+    public static boolean isBossEntity(LivingEntity entity) {
+        return (entity instanceof WitherBoss ||
+                entity instanceof EnderDragon ||
+                entity instanceof ElderGuardian);
+    }
+
+    /**
+     * Checks if the entity is a boss-like entity.
+     * This includes all boss entities and the Warden.
+     * Anything in the health range of a boss entity is considered boss-like.
+     *
+     * @param entity the entity to check
+     * @return true if the entity is a boss-like entity, false otherwise
+     */
+    public static boolean isBossLikeEntity(LivingEntity entity) {
+        return (isBossEntity(entity) || entity instanceof Warden);
     }
 }
